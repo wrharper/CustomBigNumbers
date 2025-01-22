@@ -72,7 +72,7 @@ namespace CustomBigNumbersLibrary
         private static async Task DisplayIncrementingNumberAsync()
         {
             CustomBigNumbersLibrary number = new(1, 0);
-            CustomBigNumbersLibrary addition = new(1, 1, 1);
+            CustomBigNumbersLibrary addition = new(1, 1, double.MaxValue/100);
 
             while (true)
             {

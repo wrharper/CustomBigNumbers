@@ -4,13 +4,20 @@ namespace CustomBigNumbersLibrary
 {
     public partial struct CustomBigNumbersLibrary
     {
+        private static bool debug = false;
+
+        public static void SetDebugMode(bool enable)
+        {
+            debug = enable;
+        }
+
         public float Base { get; private set; }
         public int Exponent { get; private set; }
-        public int SecondExponent { get; private set; }
+        public double SecondExponent { get; private set; }
 
-        public static readonly CustomBigNumbersLibrary MaxValue = new(9.99f, 999, 9999999);
+        public static readonly CustomBigNumbersLibrary MaxValue = new(9.99f, 999, double.MaxValue);
 
-        public CustomBigNumbersLibrary(float baseValue, int exponent, int secondExponent = 0)
+        public CustomBigNumbersLibrary(float baseValue, int exponent, double secondExponent = 0)
         {
             Base = Math.Max(baseValue, 0f);
             Exponent = Math.Max(exponent, 0);
@@ -45,17 +52,18 @@ namespace CustomBigNumbersLibrary
                 Exponent -= 1;
             }
 
-            // Normalize Exponent and SecondExponent
-            while (Exponent >= 1000)
+            // Handle Exponent and SecondExponent correctly
+            if (Exponent >= 1000)
             {
-                Exponent -= 1000;
-                SecondExponent += 1;
+                SecondExponent += Exponent / 1000.0;
+                Exponent %= 1000;
             }
 
             while (Exponent < 0 && SecondExponent > 0)
             {
-                Exponent += 1000;
-                SecondExponent -= 1;
+                int shift = (-Exponent / 1000) + 1;
+                Exponent += shift * 1000;
+                SecondExponent -= shift;
             }
 
             if (SecondExponent < 0)
@@ -65,17 +73,13 @@ namespace CustomBigNumbersLibrary
                 SecondExponent = 0;
             }
 
-            // Correctly increment exponents
-            if (Base >= 10)
+            // Handle very large second exponents without resetting
+            if (SecondExponent >= double.MaxValue)
             {
-                Base /= 10;
-                Exponent += 1;
-            }
-
-            if (Exponent >= 1000)
-            {
-                Exponent -= 1000;
-                SecondExponent += 1;
+                Base = 9.99f;
+                Exponent = 999;
+                SecondExponent = double.MaxValue;
+                if (debug) Console.WriteLine("Reached max second exponent value, setting all values to max.");
             }
 
             // Enhanced Debugging
