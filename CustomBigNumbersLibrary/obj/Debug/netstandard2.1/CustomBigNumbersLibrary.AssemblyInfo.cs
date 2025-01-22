@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CustomBigNumbersLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7d3d3e3e2efa1aa354f7cb6b7cfb80c1e0e0d53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af8ea5fc61113895d673b4e4fa720ad131e6b178")]
 [assembly: System.Reflection.AssemblyProductAttribute("CustomBigNumbersLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CustomBigNumbersLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,10 @@
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\netstandard2.1\CustomBigNumbersLibrary.GeneratedMSBuildEditorConfig.editorconfig
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\netstandard2.1\CustomBigNumbersLibrary.AssemblyInfoInputs.cache
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\netstandard2.1\CustomBigNumbersLibrary.AssemblyInfo.cs
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\netstandard2.1\CustomBigNumbersLibrary.csproj.CoreCompileInputs.cache
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\netstandard2.1\CustomBigNumbersLibrary.sourcelink.json
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\bin\Debug\netstandard2.1\CustomBigNumbersLibrary.deps.json
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\bin\Debug\netstandard2.1\CustomBigNumbersLibrary.dll
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\bin\Debug\netstandard2.1\CustomBigNumbersLibrary.pdb
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\netstandard2.1\CustomBigNumbersLibrary.dll
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\netstandard2.1\CustomBigNumbersLibrary.pdb

@@ -6,7 +6,7 @@ namespace CustomBigNumbersLibrary
     {
         public override readonly bool Equals(object obj)
         {
-            if (obj == null || obj is not CustomBigNumbersLibrary other)
+            if (!(obj != null && obj is CustomBigNumbersLibrary other))
             {
                 return false;
             }

@@ -15,7 +15,7 @@ namespace CustomBigNumbersLibrary
         public int Exponent { get; private set; }
         public double SecondExponent { get; private set; }
 
-        public static readonly CustomBigNumbersLibrary MaxValue = new(9.99f, 999, double.MaxValue);
+        public static readonly CustomBigNumbersLibrary MaxValue = new CustomBigNumbersLibrary(9.99f, 999, double.MaxValue);
 
         public CustomBigNumbersLibrary(float baseValue, int exponent, double secondExponent = 0)
         {

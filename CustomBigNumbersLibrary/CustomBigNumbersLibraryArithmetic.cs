@@ -19,7 +19,7 @@ namespace CustomBigNumbersLibrary
             int newExponent = a.Exponent + b.Exponent;
             double newSecondExponent = a.SecondExponent + b.SecondExponent;
 
-            CustomBigNumbersLibrary result = new(newBase, newExponent, newSecondExponent);
+            CustomBigNumbersLibrary result = new CustomBigNumbersLibrary(newBase, newExponent, newSecondExponent);
             if (debug) Console.WriteLine($"Before Normalize: {result}");
             result.Normalize();
             if (debug) Console.WriteLine($"After Normalize: {result}");
@@ -45,7 +45,7 @@ namespace CustomBigNumbersLibrary
                 return new CustomBigNumbersLibrary(0, 0);
             }
 
-            CustomBigNumbersLibrary result = new(newBase, newExponent, newSecondExponent);
+            CustomBigNumbersLibrary result = new CustomBigNumbersLibrary(newBase, newExponent, newSecondExponent);
             if (debug) Console.WriteLine($"Before Normalize: {result}");
             result.Normalize();
             if (debug) Console.WriteLine($"After Normalize: {result}");
@@ -67,7 +67,7 @@ namespace CustomBigNumbersLibrary
             int newExponent = a.Exponent + b.Exponent;
             double newSecondExponent = a.SecondExponent + b.SecondExponent;
 
-            CustomBigNumbersLibrary result = new(newBase, newExponent, newSecondExponent);
+            CustomBigNumbersLibrary result = new CustomBigNumbersLibrary(newBase, newExponent, newSecondExponent);
             if (debug) Console.WriteLine($"Before Normalize: {result}");
             result.Normalize();
             if (debug) Console.WriteLine($"After Normalize: {result}");
@@ -89,7 +89,7 @@ namespace CustomBigNumbersLibrary
             int newExponent = a.Exponent;
             double newSecondExponent = a.SecondExponent;
 
-            CustomBigNumbersLibrary result = new(newBase, newExponent, newSecondExponent);
+            CustomBigNumbersLibrary result = new CustomBigNumbersLibrary(newBase, newExponent, newSecondExponent);
             if (debug) Console.WriteLine($"Before Normalize: {result}");
             result.Normalize();
             if (debug) Console.WriteLine($"After Normalize: {result}");
@@ -117,7 +117,7 @@ namespace CustomBigNumbersLibrary
                 return new CustomBigNumbersLibrary(0, 0);
             }
 
-            CustomBigNumbersLibrary result = new(newBase, newExponent, newSecondExponent);
+            CustomBigNumbersLibrary result = new CustomBigNumbersLibrary(newBase, newExponent, newSecondExponent);
             if (debug) Console.WriteLine($"Before Normalize: {result}");
             result.Normalize();
             if (debug) Console.WriteLine($"After Normalize: {result}");
@@ -145,7 +145,7 @@ namespace CustomBigNumbersLibrary
                 return new CustomBigNumbersLibrary(0, 0);
             }
 
-            CustomBigNumbersLibrary result = new(newBase, newExponent, newSecondExponent);
+            CustomBigNumbersLibrary result = new CustomBigNumbersLibrary(newBase, newExponent, newSecondExponent);
             if (debug) Console.WriteLine($"Before Normalize: {result}");
             result.Normalize();
             if (debug) Console.WriteLine($"After Normalize: {result}");
