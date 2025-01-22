@@ -9,3 +9,15 @@ C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\
 C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\refint\CustomBigNumbersLibrary.dll
 C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.pdb
 C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\ref\CustomBigNumbersLibrary.dll
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\bin\Debug\net8.0\CustomBigNumbersLibrary.deps.json
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\bin\Debug\net8.0\CustomBigNumbersLibrary.dll
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\bin\Debug\net8.0\CustomBigNumbersLibrary.pdb
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.GeneratedMSBuildEditorConfig.editorconfig
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.AssemblyInfoInputs.cache
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.AssemblyInfo.cs
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.csproj.CoreCompileInputs.cache
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.sourcelink.json
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.dll
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\refint\CustomBigNumbersLibrary.dll
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.pdb
+E:\Unity\CustomBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\ref\CustomBigNumbersLibrary.dll

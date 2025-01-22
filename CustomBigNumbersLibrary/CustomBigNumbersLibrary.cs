@@ -29,6 +29,10 @@ namespace CustomBigNumbersLibrary
                 return;
             }
 
+            // Enhanced Debugging
+            if (debug) Console.WriteLine($"Normalizing: Base={Base}, Exponent={Exponent}, SecondExponent={SecondExponent}");
+
+            // Normalize Base and Exponent
             while (Base >= 10)
             {
                 Base /= 10;
@@ -41,17 +45,17 @@ namespace CustomBigNumbersLibrary
                 Exponent -= 1;
             }
 
-            if (Exponent >= 1000)
+            // Normalize Exponent and SecondExponent
+            while (Exponent >= 1000)
             {
-                SecondExponent += Exponent / 1000;
-                Exponent %= 1000;
+                Exponent -= 1000;
+                SecondExponent += 1;
             }
 
-            if (Exponent < 0 && SecondExponent > 0)
+            while (Exponent < 0 && SecondExponent > 0)
             {
-                int shift = (-Exponent / 1000) + 1;
-                Exponent += shift * 1000;
-                SecondExponent -= shift;
+                Exponent += 1000;
+                SecondExponent -= 1;
             }
 
             if (SecondExponent < 0)
@@ -60,6 +64,22 @@ namespace CustomBigNumbersLibrary
                 Exponent = 0;
                 SecondExponent = 0;
             }
+
+            // Correctly increment exponents
+            if (Base >= 10)
+            {
+                Base /= 10;
+                Exponent += 1;
+            }
+
+            if (Exponent >= 1000)
+            {
+                Exponent -= 1000;
+                SecondExponent += 1;
+            }
+
+            // Enhanced Debugging
+            if (debug) Console.WriteLine($"Normalized: Base={Base}, Exponent={Exponent}, SecondExponent={SecondExponent}");
         }
 
         private static float NormalizeBase(float baseValue, int exponentDiff)

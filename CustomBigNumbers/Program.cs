@@ -13,15 +13,16 @@ namespace CustomBigNumbersLibrary
     {
         static async Task Main()
         {
-            //The 100% CPU TRUE Multithread test
-            using CancellationTokenSource cts = new();
+            CustomBigNumbersLibrary.SetDebugMode(false);
+            // The 100% CPU TRUE Multithread test
+            /*using CancellationTokenSource cts = new();
             var arithmeticTasks = CreateArithmeticTasks(cts.Token);
             var displayTask = DisplayIncrementingNumberAsync(cts.Token);
 
             await Task.WhenAll(arithmeticTasks);
-            await displayTask;
+            await displayTask;*/
 
-            //Main Thread only
+            // Main Thread only
             await DisplayIncrementingNumberAsync();
 
             // Compares Main Thread vs Async 100% CPU Test.
@@ -44,7 +45,7 @@ namespace CustomBigNumbersLibrary
         private static async Task PerformArithmeticOperations(CancellationToken token)
         {
             CustomBigNumbersLibrary number = new(1, 0);
-            CustomBigNumbersLibrary[] numbers = [number];
+            CustomBigNumbersLibrary[] numbers = { number };
 
             while (!token.IsCancellationRequested)
             {
@@ -71,12 +72,13 @@ namespace CustomBigNumbersLibrary
         private static async Task DisplayIncrementingNumberAsync()
         {
             CustomBigNumbersLibrary number = new(1, 0);
+            CustomBigNumbersLibrary addition = new(1, 1, 1);
 
             while (true)
             {
                 Console.Clear();
                 Console.WriteLine(number);
-                number += new CustomBigNumbersLibrary(1, 0);
+                number += addition;
                 await Task.Delay(10); // 0.01 seconds delay
             }
         }
@@ -84,7 +86,7 @@ namespace CustomBigNumbersLibrary
         private static async Task DisplayIncrementingNumberAsync(CancellationToken token)
         {
             CustomBigNumbersLibrary number = new(1, 0);
-            CustomBigNumbersLibrary[] numbers = [number];
+            CustomBigNumbersLibrary[] numbers = { number };
 
             static void progressCallback(CustomBigNumbersLibrary currentNumber)
             {
@@ -104,7 +106,7 @@ namespace CustomBigNumbersLibrary
                 number = numbers[0];
                 Console.WriteLine($"Processed number: {number}");
 
-                await Task.Delay(10, token); // 1-second delay
+                await Task.Delay(10, token); // 0.01 seconds delay
             }
         }
 
