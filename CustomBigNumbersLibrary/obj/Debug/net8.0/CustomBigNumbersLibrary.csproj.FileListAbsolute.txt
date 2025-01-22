@@ -1,0 +1,11 @@
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\bin\Debug\net8.0\CustomBigNumbersLibrary.deps.json
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\bin\Debug\net8.0\CustomBigNumbersLibrary.dll
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\bin\Debug\net8.0\CustomBigNumbersLibrary.pdb
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.AssemblyInfoInputs.cache
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.AssemblyInfo.cs
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.csproj.CoreCompileInputs.cache
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.dll
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\refint\CustomBigNumbersLibrary.dll
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\CustomBigNumbersLibrary.pdb
+C:\Users\kujax\source\repos\HarpersBigNumbers\CustomBigNumbersLibrary\obj\Debug\net8.0\ref\CustomBigNumbersLibrary.dll
