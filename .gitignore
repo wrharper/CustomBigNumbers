@@ -68,3 +68,12 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/CustomBigNumbers/bin/Debug/net8.0/CustomBigNumbers.dll
+/CustomBigNumbers/bin/Debug/net8.0/CustomBigNumbers.exe
+/CustomBigNumbers/obj/Debug/net8.0/ref/CustomBigNumbers.dll
+/CustomBigNumbers/obj/Debug/net8.0/refint/CustomBigNumbers.dll
+/CustomBigNumbers/obj/Debug/net8.0/CustomBigNumbers.dll
+/CustomBigNumbers/obj/Debug/net8.0/apphost.exe
+/CustomBigNumbers/obj/Debug/net8.0/CustomBigNumbers.AssemblyInfo.cs
+/CustomBigNumbers/obj/Debug/net8.0/CustomBigNumbers.AssemblyInfoInputs.cache
+/CustomBigNumbers/obj/Debug/net8.0/CustomBigNumbers.sourcelink.json
