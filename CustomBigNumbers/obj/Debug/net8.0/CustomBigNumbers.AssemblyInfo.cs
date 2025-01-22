@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CustomBigNumbers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46f1a846e89564b825bcd9b71a0404450948d6b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d29aabd36bf57bca797b29dbd14773218f36a68")]
 [assembly: System.Reflection.AssemblyProductAttribute("CustomBigNumbers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CustomBigNumbers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
