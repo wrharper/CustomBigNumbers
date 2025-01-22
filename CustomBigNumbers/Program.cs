@@ -7,24 +7,45 @@ using System.Threading.Tasks;
 // Main Thread Time: 40123 ms
 // Async 100% CPU Processing Time: 3541 ms
 
+//Change Test = 0; to what you want to test.
+//0 = Async Test
+//1 = Main Thread Test
+//2 = Main Thread Max Value Test
+//3 = Main vs Async Test (will hang, just wait)
+
 namespace CustomBigNumbersLibrary
 {
     class Program
     {
+        static readonly int Test = 0;
         static async Task Main()
         {
             CustomBigNumbersLibrary.SetDebugMode(false);
-            // The 100% CPU TRUE Multithread test
-            using CancellationTokenSource cts = new();
-            var displayTask = DisplayIncrementingNumberAsync(cts.Token);
 
-            await displayTask;
+            switch(Test)
+            {
+                case 0:
+                    {
+                        // Multithread only
+                        using CancellationTokenSource cts = new();
+                        var displayTask = DisplayIncrementingNumberAsync(cts.Token);
 
-            // Main Thread only
-            //await DisplayIncrementingNumberAsync();
-
-            // Compares Main Thread vs Async 100% CPU Test.
-            // await HeavyAsyncTest();
+                        await displayTask;
+                        break;
+                    }
+                case 1:
+                    // Main Thread only
+                    await DisplayIncrementingNumberAsync(false);
+                    break;
+                case 2:
+                    // Main Thread only
+                    await DisplayIncrementingNumberAsync(true);
+                    break;
+                case 3:
+                    // Compares Main Thread vs Async 100% CPU Test.
+                    await HeavyAsyncTest();
+                    break;
+            }
         }
 
         private static CustomBigNumbersLibrary AdditionComputation(CustomBigNumbersLibrary number)
@@ -46,10 +67,14 @@ namespace CustomBigNumbersLibrary
             return number;
         }
 
-        private static async Task DisplayIncrementingNumberAsync()
+        private static async Task DisplayIncrementingNumberAsync(bool MaxValueTest)
         {
             CustomBigNumbersLibrary number = new(1, 0);
-            CustomBigNumbersLibrary addition = new(1, 1, double.MaxValue/100);
+            CustomBigNumbersLibrary addition;
+            if (MaxValueTest)
+                addition = new(1, 1, double.MaxValue / 100);
+            else
+                addition = new(1, 1, 1);
 
             while (true)
             {
@@ -63,7 +88,7 @@ namespace CustomBigNumbersLibrary
         private static async Task DisplayIncrementingNumberAsync(CancellationToken token)
         {
             CustomBigNumbersLibrary number = new(1, 0);
-            CustomBigNumbersLibrary[] numbers = { number };
+            CustomBigNumbersLibrary[] numbers = [number];
 
             static void progressCallback(CustomBigNumbersLibrary currentNumber)
             {
