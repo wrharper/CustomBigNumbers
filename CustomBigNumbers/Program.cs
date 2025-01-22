@@ -15,48 +15,25 @@ namespace CustomBigNumbersLibrary
         {
             CustomBigNumbersLibrary.SetDebugMode(false);
             // The 100% CPU TRUE Multithread test
-            /*using CancellationTokenSource cts = new();
-            var arithmeticTasks = CreateArithmeticTasks(cts.Token);
+            using CancellationTokenSource cts = new();
             var displayTask = DisplayIncrementingNumberAsync(cts.Token);
 
-            await Task.WhenAll(arithmeticTasks);
-            await displayTask;*/
+            await displayTask;
 
             // Main Thread only
-            await DisplayIncrementingNumberAsync();
+            //await DisplayIncrementingNumberAsync();
 
             // Compares Main Thread vs Async 100% CPU Test.
             // await HeavyAsyncTest();
         }
 
-        private static Task[] CreateArithmeticTasks(CancellationToken token)
+        private static CustomBigNumbersLibrary AdditionComputation(CustomBigNumbersLibrary number)
         {
-            int processorCount = Environment.ProcessorCount;
-            Task[] tasks = new Task[processorCount];
-
-            for (int i = 0; i < processorCount; i++)
+            for (int i = 0; i < 1000; i++)
             {
-                tasks[i] = Task.Run(() => PerformArithmeticOperations(token), token);
+                number += new CustomBigNumbersLibrary(1, 1, 1);
             }
-
-            return tasks;
-        }
-
-        private static async Task PerformArithmeticOperations(CancellationToken token)
-        {
-            CustomBigNumbersLibrary number = new(1, 0);
-            CustomBigNumbersLibrary[] numbers = { number };
-
-            while (!token.IsCancellationRequested)
-            {
-                await CustomBigNumbersLibraryThreading.ProcessArrayInParallelWithProgress(
-                    numbers,
-                    n => HeavyComputation(n),
-                    _ => { } // No display callback for arithmetic tasks
-                );
-
-                number = numbers[0];
-            }
+            return number;
         }
 
         private static CustomBigNumbersLibrary HeavyComputation(CustomBigNumbersLibrary number)
@@ -99,12 +76,11 @@ namespace CustomBigNumbersLibrary
                 // Perform a batch of arithmetic operations and display the result
                 await CustomBigNumbersLibraryThreading.ProcessArrayInParallelWithProgress(
                     numbers,
-                    n => HeavyComputation(n),
+                    n => AdditionComputation(n),
                     progressCallback
                 );
 
                 number = numbers[0];
-                Console.WriteLine($"Processed number: {number}");
 
                 await Task.Delay(10, token); // 0.01 seconds delay
             }
