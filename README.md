@@ -1,7 +1,7 @@
 # CustomBigNumbers
 This program is designed to expand past the standard e308 limitation. Primarly for the idea of Idle games, but this makes any game go huge with mega numbers.
 
-The idea is to still have a limit but keep memory management in control.
+The idea is to still have a limit, but keep memory management in control.
 
 1e1 is a power of 10
 
