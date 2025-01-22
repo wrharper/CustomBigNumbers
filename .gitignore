@@ -77,3 +77,10 @@ crashlytics-build.properties
 /CustomBigNumbers/obj/Debug/net8.0/CustomBigNumbers.AssemblyInfo.cs
 /CustomBigNumbers/obj/Debug/net8.0/CustomBigNumbers.AssemblyInfoInputs.cache
 /CustomBigNumbers/obj/Debug/net8.0/CustomBigNumbers.sourcelink.json
+/CustomBigNumbersLibrary/bin/Debug/net8.0/CustomBigNumbersLibrary.dll
+/CustomBigNumbersLibrary/obj/Debug/net8.0/ref/CustomBigNumbersLibrary.dll
+/CustomBigNumbersLibrary/obj/Debug/net8.0/refint/CustomBigNumbersLibrary.dll
+/CustomBigNumbersLibrary/obj/Debug/net8.0/CustomBigNumbersLibrary.dll
+/CustomBigNumbersLibrary/obj/Debug/net8.0/CustomBigNumbersLibrary.sourcelink.json
+/CustomBigNumbersLibrary/obj/Debug/net8.0/CustomBigNumbersLibrary.AssemblyInfoInputs.cache
+/CustomBigNumbersLibrary/obj/Debug/net8.0/CustomBigNumbersLibrary.AssemblyInfo.cs
