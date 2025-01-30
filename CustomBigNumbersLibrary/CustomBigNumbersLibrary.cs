@@ -96,5 +96,15 @@ namespace CustomBigNumbersLibrary
             float baseValue = percentage / 100f;
             return new CustomBigNumbersLibrary(baseValue, 0);
         }
+
+        public static CustomBigNumbersLibrary Pow(CustomBigNumbersLibrary baseValue, int exponent)
+        {
+            CustomBigNumbersLibrary result = new CustomBigNumbersLibrary(1f, 0, 0); // Initialize result as 1
+            for (int i = 0; i < exponent; i++)
+            {
+                result *= baseValue;
+            }
+            return result;
+        }
     }
 }
