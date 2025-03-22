@@ -1,5 +1,5 @@
 # CustomBigNumbers
-This program is designed to expand past the standard e308 limitation. Primarly for the idea of Idle games, but this makes any game go huge with mega numbers.
+This program is designed to expand past the standard e308 limitation. Primarly for the idea of Idle games, but this makes any game go huge with mega numbers. This was a "just for fun" project to see what I am capable of with mathmatical barriers. Usually you would want to use BigInt, but that can cause memory issues if the number gets too large.
 
 The idea is to still have a limit, but keep memory management in control.
 
